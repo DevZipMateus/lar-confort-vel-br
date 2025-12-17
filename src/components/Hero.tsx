@@ -18,8 +18,8 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container-custom px-4 md:px-8 pt-20">
-        <div className="max-w-2xl">
+      <div className="relative z-10 container-custom px-4 sm:px-6 md:px-8 pt-24 sm:pt-28 md:pt-20">
+        <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-6 opacity-0 animate-fade-in-up">
             Outlet Star House
           </h1>
@@ -32,7 +32,7 @@ const Hero = () => {
             "Conforto que transforma seu lar."
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in-up animation-delay-600">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-fade-in-up animation-delay-600">
             <Button
               asChild
               size="lg"

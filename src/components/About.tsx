@@ -26,14 +26,14 @@ const About = () => {
   return (
     <section id="sobre" className="section-padding bg-secondary">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Sobre a Outlet Star House
           </h2>
-          <div className="w-24 h-1 bg-gradient-copper mx-auto rounded-full" />
+          <div className="w-20 sm:w-24 h-1 bg-gradient-copper mx-auto rounded-full" />
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-12 sm:mb-20">
           <div className="space-y-6">
             <h3 className="font-display text-2xl md:text-3xl font-semibold text-foreground">
               Nossa história
@@ -61,7 +61,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="relative max-w-sm mx-auto lg:mx-0">
+          <div className="relative max-w-xs sm:max-w-sm mx-auto lg:mx-0 mt-8 lg:mt-0">
             <div className="rounded-2xl overflow-hidden shadow-elegant">
               <video
                 autoPlay
@@ -78,25 +78,25 @@ const About = () => {
         </div>
 
         {/* Showroom Image */}
-        <div className="mb-20 rounded-2xl overflow-hidden shadow-elegant">
+        <div className="mb-12 sm:mb-20 rounded-xl sm:rounded-2xl overflow-hidden shadow-elegant">
           <img
             src={lojaShowroom}
             alt="Showroom Outlet Star House - Colchões e Sofás"
-            className="w-full h-64 md:h-96 object-cover"
+            className="w-full h-48 sm:h-64 md:h-80 lg:h-96 object-cover"
           />
-          <div className="bg-gradient-copper p-6 text-center">
-            <p className="font-display text-lg md:text-xl text-primary-foreground">
+          <div className="bg-gradient-copper p-4 sm:p-6 text-center">
+            <p className="font-display text-base sm:text-lg md:text-xl text-primary-foreground">
               Visite nossa loja e confira nossa variedade de produtos
             </p>
           </div>
         </div>
 
         {/* Mission, Vision, Values */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           {values.map((item, index) => (
             <div
               key={item.title}
-              className="bg-background rounded-2xl p-8 shadow-elegant hover:shadow-copper transition-all duration-300 hover:-translate-y-2"
+              className="bg-background rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-elegant hover:shadow-copper transition-all duration-300 hover:-translate-y-2"
               style={{ animationDelay: `${index * 150}ms` }}
             >
               <div className="w-14 h-14 bg-gradient-copper rounded-xl flex items-center justify-center mb-6">
