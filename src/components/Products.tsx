@@ -2,6 +2,8 @@ import { Bed, Sofa, Armchair } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import colchaoBenefit from "@/assets/colchao-benefit.jpg";
 import colchaoMegasupport from "@/assets/colchao-megasupport.jpg";
+import sofaElegante from "@/assets/sofa-elegante.jpg";
+import colchaoQuarto from "@/assets/colchao-quarto.jpg";
 
 const Products = () => {
   const categories = [
@@ -38,6 +40,16 @@ const Products = () => {
       image: colchaoMegasupport,
       title: "Colchão Mega Support",
       description: "Suporte extra para até 150kg - Densidade D45",
+    },
+    {
+      image: sofaElegante,
+      title: "Sofás elegantes",
+      description: "Design moderno com acabamento premium para sua sala",
+    },
+    {
+      image: colchaoQuarto,
+      title: "Colchões de qualidade",
+      description: "Noites de sono perfeitas com conforto incomparável",
     },
   ];
 
