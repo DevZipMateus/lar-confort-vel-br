@@ -1,4 +1,5 @@
-import { Star, Quote } from "lucide-react";
+import { Star, Quote, MessageCircle } from "lucide-react";
+import depoimentoFernanda from "@/assets/depoimento-fernanda.jpg";
 
 const Testimonials = () => {
   const testimonials = [
@@ -32,7 +33,7 @@ const Testimonials = () => {
           <div className="w-24 h-1 bg-gradient-copper mx-auto rounded-full mt-6" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -65,6 +66,31 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* WhatsApp Testimonial Image */}
+        <div className="bg-background rounded-3xl p-8 md:p-12 shadow-elegant max-w-lg mx-auto">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center">
+              <MessageCircle className="w-5 h-5 text-background" />
+            </div>
+            <div>
+              <h3 className="font-display text-lg font-semibold text-foreground">
+                Depoimento real
+              </h3>
+              <p className="font-body text-sm text-muted-foreground">
+                Via WhatsApp
+              </p>
+            </div>
+          </div>
+          
+          <div className="rounded-2xl overflow-hidden shadow-lg">
+            <img
+              src={depoimentoFernanda}
+              alt="Depoimento da cliente Fernanda via WhatsApp sobre a excelente qualidade do colchão e atendimento"
+              className="w-full h-auto"
+            />
+          </div>
         </div>
       </div>
     </section>
