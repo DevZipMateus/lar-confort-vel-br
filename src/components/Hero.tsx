@@ -46,25 +46,25 @@ const Hero = () => {
 
 
       {/* Content */}
-      <div className="relative z-10 container-custom px-4 sm:px-6 md:px-8 pt-24 sm:pt-28 md:pt-20">
+      <div className="relative z-10 container-custom px-4 sm:px-6 md:px-8 pt-20 sm:pt-24 md:pt-20">
         <div className="max-w-2xl mx-auto lg:mx-0 text-center lg:text-left">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-6 opacity-0 animate-fade-in-up">
+          <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-background mb-4 sm:mb-6 opacity-0 animate-fade-in-up">
             Outlet Star House
           </h1>
           
-          <h2 className="font-display text-xl md:text-2xl lg:text-3xl text-cream mb-4 opacity-0 animate-fade-in-up animation-delay-200">
+          <h2 className="font-display text-lg sm:text-xl md:text-2xl lg:text-3xl text-cream mb-3 sm:mb-4 opacity-0 animate-fade-in-up animation-delay-200">
             Colchões e sofás premium com preços acessíveis para transformar seu lar
           </h2>
           
-          <p className="font-body text-lg md:text-xl text-cream/90 mb-8 opacity-0 animate-fade-in-up animation-delay-400">
+          <p className="font-body text-base sm:text-lg md:text-xl text-cream/90 mb-6 sm:mb-8 opacity-0 animate-fade-in-up animation-delay-400">
             "Conforto que transforma seu lar."
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start opacity-0 animate-fade-in-up animation-delay-600">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start opacity-0 animate-fade-in-up animation-delay-600">
             <Button
               asChild
               size="lg"
-              className="bg-primary hover:bg-copper-dark text-primary-foreground font-body font-semibold px-8 py-6 text-base shadow-copper transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-copper-dark text-primary-foreground font-body font-semibold px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base shadow-copper transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               <a
                 href="https://wa.me/5511999999999"
@@ -79,7 +79,7 @@ const Hero = () => {
               asChild
               variant="outline"
               size="lg"
-              className="border-2 border-cream/60 bg-cream/10 text-cream hover:bg-cream hover:text-foreground font-body font-semibold px-8 py-6 text-base transition-all duration-300"
+              className="border-2 border-cream/60 bg-cream/10 text-cream hover:bg-cream hover:text-foreground font-body font-semibold px-6 sm:px-8 py-5 sm:py-6 text-sm sm:text-base transition-all duration-300 w-full sm:w-auto"
             >
               <a href="#produtos">Ver produtos</a>
             </Button>
