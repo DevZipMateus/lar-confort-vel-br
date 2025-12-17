@@ -4,12 +4,16 @@ import colchaoBenefit from "@/assets/colchao-benefit.jpg";
 import colchaoMegasupport from "@/assets/colchao-megasupport.jpg";
 import sofaElegante from "@/assets/sofa-elegante.jpg";
 import colchaoQuarto from "@/assets/colchao-quarto.jpg";
+import categoriaColchoes from "@/assets/categoria-colchoes.jpg";
+import categoriaSofas from "@/assets/categoria-sofas.jpg";
+import categoriaEstofados from "@/assets/categoria-estofados.jpg";
 
 const Products = () => {
   const categories = [
     {
       icon: Bed,
       title: "Colchões",
+      image: categoriaColchoes,
       description:
         "Colchões de molas, espuma e híbridos das melhores marcas. Qualidade premium com preços de outlet para noites de sono perfeitas.",
       features: ["Molas ensacadas", "Espuma viscoelástica", "Ortopédicos"],
@@ -17,6 +21,7 @@ const Products = () => {
     {
       icon: Sofa,
       title: "Sofás",
+      image: categoriaSofas,
       description:
         "Sofás modernos e clássicos em diversos tamanhos e acabamentos. Elegância e conforto para sua sala de estar.",
       features: ["Retrátil e reclinável", "Canto e chaise", "Compactos"],
@@ -24,6 +29,7 @@ const Products = () => {
     {
       icon: Armchair,
       title: "Estofados e móveis",
+      image: categoriaEstofados,
       description:
         "Poltronas, puffs e móveis complementares para criar o ambiente perfeito. Variedade de estilos e cores.",
       features: ["Poltronas decorativas", "Puffs e banquetas", "Cabeceiras"],
@@ -74,8 +80,12 @@ const Products = () => {
               key={product.title}
               className="group bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-copper transition-all duration-500 hover:-translate-y-3"
             >
-              <div className="bg-gradient-copper p-8 flex items-center justify-center">
-                <product.icon className="w-16 h-16 text-primary-foreground group-hover:scale-110 transition-transform duration-300" />
+              <div className="aspect-[4/3] overflow-hidden">
+                <img
+                  src={product.image}
+                  alt={product.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               </div>
               
               <div className="p-8">
