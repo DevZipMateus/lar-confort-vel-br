@@ -55,12 +55,10 @@ const Testimonials = () => {
               
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-gradient-copper rounded-full flex items-center justify-center">
-                  <span className="font-display text-lg font-bold text-primary-foreground">
-                    {testimonial.name.charAt(0)}
-                  </span>
+                  <Star className="w-5 h-5 text-primary-foreground fill-primary-foreground" />
                 </div>
-                <span className="font-display font-semibold text-foreground">
-                  {testimonial.name}
+                <span className="font-body text-sm text-muted-foreground">
+                  Cliente verificado
                 </span>
               </div>
             </div>
