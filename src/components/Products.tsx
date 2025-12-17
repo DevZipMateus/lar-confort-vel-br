@@ -1,8 +1,10 @@
 import { Bed, Sofa, Armchair } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import colchaoBenefit from "@/assets/colchao-benefit.jpg";
+import colchaoMegasupport from "@/assets/colchao-megasupport.jpg";
 
 const Products = () => {
-  const products = [
+  const categories = [
     {
       icon: Bed,
       title: "Colchões",
@@ -26,6 +28,19 @@ const Products = () => {
     },
   ];
 
+  const gallery = [
+    {
+      image: colchaoBenefit,
+      title: "Colchão Benefit",
+      description: "Conforto premium com design elegante e cabeceira capitonê",
+    },
+    {
+      image: colchaoMegasupport,
+      title: "Colchão Mega Support",
+      description: "Suporte extra para até 150kg - Densidade D45",
+    },
+  ];
+
   return (
     <section id="produtos" className="section-padding bg-background">
       <div className="container-custom">
@@ -40,8 +55,9 @@ const Products = () => {
           <div className="w-24 h-1 bg-gradient-copper mx-auto rounded-full mt-6" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {products.map((product, index) => (
+        {/* Categories */}
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {categories.map((product) => (
             <div
               key={product.title}
               className="group bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-copper transition-all duration-500 hover:-translate-y-3"
@@ -72,6 +88,44 @@ const Products = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Real Product Gallery */}
+        <div className="bg-card rounded-3xl p-8 md:p-12">
+          <div className="text-center mb-10">
+            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+              Conheça nossos produtos
+            </h3>
+            <p className="font-body text-muted-foreground">
+              Fotos reais da nossa loja
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {gallery.map((item, index) => (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-2xl shadow-elegant hover:shadow-copper transition-all duration-500"
+              >
+                <div className="aspect-[4/3] overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-6">
+                  <h4 className="font-display text-xl font-semibold text-background mb-2">
+                    {item.title}
+                  </h4>
+                  <p className="font-body text-sm text-background/80">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="text-center mt-12">
