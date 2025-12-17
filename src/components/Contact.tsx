@@ -31,28 +31,28 @@ const Contact = () => {
   return (
     <section id="contato" className="section-padding bg-background">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-10 sm:mb-16 px-2">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Entre em contato
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-body text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto">
             Visite nossa loja ou entre em contato conosco. Estamos prontos para
             ajudar você a encontrar o conforto ideal para seu lar.
           </p>
-          <div className="w-24 h-1 bg-gradient-copper mx-auto rounded-full mt-6" />
+          <div className="w-20 sm:w-24 h-1 bg-gradient-copper mx-auto rounded-full mt-4 sm:mt-6" />
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 lg:gap-6">
           {contactInfo.map((info, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-6 shadow-elegant hover:shadow-copper transition-all duration-300 hover:-translate-y-2 text-center"
+              className="bg-card rounded-xl sm:rounded-2xl p-5 sm:p-6 shadow-elegant hover:shadow-copper transition-all duration-300 hover:-translate-y-2 text-center"
             >
-              <div className="w-14 h-14 bg-gradient-copper rounded-xl flex items-center justify-center mx-auto mb-4">
-                <info.icon className="w-7 h-7 text-primary-foreground" />
+              <div className="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-copper rounded-lg sm:rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4">
+                <info.icon className="w-6 sm:w-7 h-6 sm:h-7 text-primary-foreground" />
               </div>
               
-              <h3 className="font-display text-lg font-semibold text-foreground mb-2">
+              <h3 className="font-display text-base sm:text-lg font-semibold text-foreground mb-2">
                 {info.title}
               </h3>
               
@@ -61,12 +61,12 @@ const Contact = () => {
                   href={info.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body text-muted-foreground hover:text-primary transition-colors whitespace-pre-line"
+                  className="font-body text-sm sm:text-base text-muted-foreground hover:text-primary transition-colors whitespace-pre-line break-words"
                 >
                   {info.content}
                 </a>
               ) : (
-                <p className="font-body text-muted-foreground whitespace-pre-line">
+                <p className="font-body text-sm sm:text-base text-muted-foreground whitespace-pre-line">
                   {info.content}
                 </p>
               )}
