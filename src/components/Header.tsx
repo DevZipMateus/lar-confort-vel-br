@@ -24,7 +24,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-background shadow-lg`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-foreground shadow-lg`}
     >
       <div className="container-custom">
         <nav className="flex items-center justify-between py-4 px-4 md:px-8">
@@ -42,7 +42,7 @@ const Header = () => {
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="font-body text-sm font-medium text-foreground/80 hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
+                  className="font-body text-sm font-medium text-background/80 hover:text-primary transition-colors duration-300 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {link.label}
                 </a>
@@ -53,7 +53,7 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-background hover:text-primary transition-colors"
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -66,13 +66,13 @@ const Header = () => {
             isOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
-          <ul className="flex flex-col items-center gap-4 py-6 bg-background/95 backdrop-blur-md">
+          <ul className="flex flex-col items-center gap-4 py-6 bg-foreground">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="font-body text-base font-medium text-foreground/80 hover:text-primary transition-colors duration-300"
+                  className="font-body text-base font-medium text-background/80 hover:text-primary transition-colors duration-300"
                 >
                   {link.label}
                 </a>
