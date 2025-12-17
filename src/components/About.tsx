@@ -1,4 +1,5 @@
 import { Target, Eye, Heart } from "lucide-react";
+import lojaShowroom from "@/assets/loja-showroom.jpg";
 
 const About = () => {
   const values = [
@@ -73,6 +74,20 @@ const About = () => {
               </video>
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/30 rounded-2xl -z-10" />
+          </div>
+        </div>
+
+        {/* Showroom Image */}
+        <div className="mb-20 rounded-2xl overflow-hidden shadow-elegant">
+          <img
+            src={lojaShowroom}
+            alt="Showroom Outlet Star House - Colchões e Sofás"
+            className="w-full h-64 md:h-96 object-cover"
+          />
+          <div className="bg-gradient-copper p-6 text-center">
+            <p className="font-display text-lg md:text-xl text-primary-foreground">
+              Visite nossa loja e confira nossa variedade de produtos
+            </p>
           </div>
         </div>
 
