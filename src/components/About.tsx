@@ -61,10 +61,16 @@ const About = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-copper rounded-2xl p-8 md:p-12 shadow-elegant">
-              <blockquote className="font-display text-xl md:text-2xl text-primary-foreground italic text-center">
-                "Conforto que transforma seu lar."
-              </blockquote>
+            <div className="rounded-2xl overflow-hidden shadow-elegant">
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover rounded-2xl"
+              >
+                <source src="/sofa.mp4" type="video/mp4" />
+              </video>
             </div>
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-primary/30 rounded-2xl -z-10" />
           </div>
