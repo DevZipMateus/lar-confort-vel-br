@@ -5,15 +5,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-foreground text-background py-16">
-      <div className="container-custom px-4 md:px-8">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+    <footer className="bg-foreground text-background py-12 sm:py-16">
+      <div className="container-custom px-4 sm:px-6 md:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12 mb-8 sm:mb-12">
           {/* Logo and Description */}
-          <div>
+          <div className="text-center sm:text-left">
             <img
               src={logo}
               alt="Outlet Star House - Logo"
-              className="h-16 w-auto mb-4 brightness-0 invert"
+              className="h-14 sm:h-16 w-auto mb-4 brightness-0 invert mx-auto sm:mx-0"
             />
             <p className="font-body text-background/70 leading-relaxed">
               Há 9 anos transformando lares com conforto de qualidade e preços
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div>
+          <div className="text-center sm:text-left">
             <h3 className="font-display text-lg font-semibold mb-4">
               Links rápidos
             </h3>
@@ -47,18 +47,18 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div>
+          <div className="text-center sm:text-left sm:col-span-2 md:col-span-1">
             <h3 className="font-display text-lg font-semibold mb-4">
               Contato
             </h3>
             <ul className="space-y-3">
-              <li className="flex items-start gap-3">
+              <li className="flex items-start gap-3 justify-center sm:justify-start">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 shrink-0" />
                 <span className="font-body text-background/70">
                   Rua Ragueb Chohfi, 4470
                 </span>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 justify-center sm:justify-start">
                 <Mail className="w-5 h-5 text-primary shrink-0" />
                 <a
                   href="mailto:carlos.guto77@gmail.com"
@@ -67,7 +67,7 @@ const Footer = () => {
                   carlos.guto77@gmail.com
                 </a>
               </li>
-              <li className="flex items-center gap-3">
+              <li className="flex items-center gap-3 justify-center sm:justify-start">
                 <Instagram className="w-5 h-5 text-primary shrink-0" />
                 <a
                   href="https://www.instagram.com/outletstarhouse/"

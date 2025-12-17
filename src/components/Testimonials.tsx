@@ -33,7 +33,7 @@ const Testimonials = () => {
           <div className="w-24 h-1 bg-gradient-copper mx-auto rounded-full mt-6" />
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -69,7 +69,7 @@ const Testimonials = () => {
         </div>
 
         {/* WhatsApp Testimonial Image */}
-        <div className="bg-background rounded-3xl p-8 md:p-12 shadow-elegant max-w-lg mx-auto">
+        <div className="bg-background rounded-2xl sm:rounded-3xl p-6 sm:p-8 md:p-12 shadow-elegant max-w-lg mx-auto">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-[#25D366] rounded-full flex items-center justify-center">
               <MessageCircle className="w-5 h-5 text-background" />

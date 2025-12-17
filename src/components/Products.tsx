@@ -62,23 +62,23 @@ const Products = () => {
   return (
     <section id="produtos" className="section-padding bg-background">
       <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
+        <div className="text-center mb-10 sm:mb-16">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Nossos produtos
           </h2>
-          <p className="font-body text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="font-body text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
             Uma seleção completa de colchões, sofás, estofados e móveis com foco
             em conforto, qualidade e elegância.
           </p>
-          <div className="w-24 h-1 bg-gradient-copper mx-auto rounded-full mt-6" />
+          <div className="w-20 sm:w-24 h-1 bg-gradient-copper mx-auto rounded-full mt-4 sm:mt-6" />
         </div>
 
         {/* Categories */}
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {categories.map((product) => (
             <div
               key={product.title}
-              className="group bg-card rounded-2xl overflow-hidden shadow-elegant hover:shadow-copper transition-all duration-500 hover:-translate-y-3"
+              className="group bg-card rounded-xl sm:rounded-2xl overflow-hidden shadow-elegant hover:shadow-copper transition-all duration-500 hover:-translate-y-2 sm:hover:-translate-y-3"
             >
               <div className="aspect-[4/3] overflow-hidden">
                 <img
@@ -88,15 +88,15 @@ const Products = () => {
                 />
               </div>
               
-              <div className="p-8">
-                <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
+              <div className="p-5 sm:p-6 md:p-8">
+                <h3 className="font-display text-xl sm:text-2xl font-semibold text-foreground mb-3 sm:mb-4">
                   {product.title}
                 </h3>
-                <p className="font-body text-muted-foreground mb-6 leading-relaxed">
+                <p className="font-body text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 leading-relaxed">
                   {product.description}
                 </p>
                 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-1.5 sm:space-y-2 mb-4 sm:mb-6">
                   {product.features.map((feature) => (
                     <li
                       key={feature}
@@ -113,21 +113,21 @@ const Products = () => {
         </div>
 
         {/* Real Product Gallery */}
-        <div className="bg-card rounded-3xl p-8 md:p-12">
-          <div className="text-center mb-10">
-            <h3 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4">
+        <div className="bg-card rounded-2xl sm:rounded-3xl p-5 sm:p-8 md:p-12">
+          <div className="text-center mb-6 sm:mb-10">
+            <h3 className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-foreground mb-3 sm:mb-4">
               Conheça nossos produtos
             </h3>
-            <p className="font-body text-muted-foreground">
+            <p className="font-body text-sm sm:text-base text-muted-foreground">
               Fotos reais da nossa loja
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
             {gallery.map((item, index) => (
               <div
                 key={index}
-                className="group relative overflow-hidden rounded-2xl shadow-elegant hover:shadow-copper transition-all duration-500"
+                className="group relative overflow-hidden rounded-xl sm:rounded-2xl shadow-elegant hover:shadow-copper transition-all duration-500"
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -137,11 +137,11 @@ const Products = () => {
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h4 className="font-display text-xl font-semibold text-background mb-2">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6">
+                  <h4 className="font-display text-lg sm:text-xl font-semibold text-background mb-1 sm:mb-2">
                     {item.title}
                   </h4>
-                  <p className="font-body text-sm text-background/80">
+                  <p className="font-body text-xs sm:text-sm text-background/80">
                     {item.description}
                   </p>
                 </div>
@@ -150,11 +150,11 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 sm:mt-12">
           <Button
             asChild
             size="lg"
-            className="bg-primary hover:bg-copper-dark text-primary-foreground font-body font-semibold px-10 py-6 text-base shadow-copper transition-all duration-300 hover:scale-105"
+            className="bg-primary hover:bg-copper-dark text-primary-foreground font-body font-semibold px-6 sm:px-10 py-5 sm:py-6 text-sm sm:text-base shadow-copper transition-all duration-300 hover:scale-105 w-full sm:w-auto"
           >
             <a
               href="https://wa.me/5511999999999"
