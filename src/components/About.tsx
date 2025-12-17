@@ -60,14 +60,14 @@ const About = () => {
             </p>
           </div>
 
-          <div className="relative">
+          <div className="relative max-w-sm mx-auto lg:mx-0">
             <div className="rounded-2xl overflow-hidden shadow-elegant">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-full object-cover rounded-2xl"
+                className="w-full h-auto object-cover rounded-2xl"
               >
                 <source src="/sofa.mp4" type="video/mp4" />
               </video>
